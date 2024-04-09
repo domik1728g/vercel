@@ -6,15 +6,15 @@ import { redirect } from "next/navigation";
 const page = () => {
   async function handleLogin(formData: FormData) {
     "use server";
-    // const email = formData.get("email") as string;
-    // const password = formData.get("password") as string;
+    const email = formData.get("email") as string;
+    const password = formData.get("password") as string;
 
-    // const user = await actions.userLogin(email, password);
+    const user = await actions.userLogin(email, password);
 
-    // if (user) {
-    //   cookies().set("user", JSON.stringify(user));
-    //   redirect("/backoffice");
-    // }
+    if (user) {
+      cookies().set("user", JSON.stringify(user));
+      redirect("/backoffice");
+    }
   }
 
   return (
