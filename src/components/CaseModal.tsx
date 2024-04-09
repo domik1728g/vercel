@@ -2,7 +2,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import SignaturePad from "signature_pad";
 
-const CaseModal = ({ caseData }) => {
+const CaseModal = ({ caseData } : any) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isToastVisible, setIsToastVisible] = useState(false);
 
