@@ -7,7 +7,7 @@ const CaseModal = ({ caseData } : any) => {
   const [isToastVisible, setIsToastVisible] = useState(false);
 
   const canvasRef = useRef(null);
-  let signaturePad;
+  let signaturePad : any;
 
   useEffect(() => {
     if (isModalOpen) {
