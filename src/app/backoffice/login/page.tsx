@@ -1,6 +1,6 @@
 import React from "react";
 import { cookies } from "next/headers";
-// import * as actions from "@/actions";
+import * as actions from "@/actions";
 import { redirect } from "next/navigation";
 
 const page = () => {
