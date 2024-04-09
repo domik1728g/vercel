@@ -10,7 +10,7 @@ const CaseModal = ({ caseData } : any) => {
   let signaturePad : any;
 
   useEffect(() => {
-    if (isModalOpen) {
+    if (isModalOpen && canvasRef.current) {
       // Initialize SignaturePad on modal open
       const canvas = canvasRef.current;
       signaturePad = new SignaturePad(canvas);
@@ -22,7 +22,7 @@ const CaseModal = ({ caseData } : any) => {
         signaturePad = null; // Set the SignaturePad instance to null
       };
     }
-  }, [isModalOpen]);
+  }, [isModalOpen, canvasRef.current]);
 
   const handleOpenModal = () => {
     setIsModalOpen(true);
